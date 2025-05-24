@@ -1,15 +1,32 @@
-// (fetch("https://jsonplaceholder.typicode.com/users/1"))
-const emailRef = document.querySelector(".email");
-
-// 1. Then
-//fetch("https://jsonplaceholder.typicode.com/users/1").then(response => {
-//return response.json();
-//})
-//.then(data => {
-//    console.log(data);
-//    emailRef.innerHTML
-//nev});
+/** 
+ * 2. Accept a paramenter called 'subscriptionsStatus'
+ * 3. Return a new Promis inside of the function that:
+ *  - if "VIP" resolve("show video")
+ * - ir ""FREE" resolve("show trailer")
+ *  - otherwise reject("no video")
+ * 4. console.log the result of getVideo(status) in main()
+ */
 
 
-// 2. Async/Await
-await fetch("https://jsonplaceholder.typicode.com/users/1")
+function getVideo (subscriptionStatus) {
+return new Promise((resolve, reject) => {
+if (subscriptionStatus === "VIP") {
+        resolve("show video");
+    }
+
+ else if (subscriptionStatus === "FREE") {
+    resolve("show Trailer")
+}
+else {
+    reject("no video")
+}
+})
+}
+
+async function main() {
+    const status = await getSubscriptionStatus();
+    statusRef.innerHTML = status;
+    console.log(await getVideo(status))
+}
+
+main();
