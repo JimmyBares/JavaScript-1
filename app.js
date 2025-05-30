@@ -1,5 +1,5 @@
- function calcPerimeter(length, width) {
-  return 2 * (length + width);
+ function calcRemainder(num1, num2){
+  return num1 % num2;
 }
 
-console.log(calcPerimeter(20, 10));
+console.log(calcRemainder(4, 2));
