@@ -1,5 +1,5 @@
- function calcRemainder(num1, num2){
-  return num1 % num2;
-}
+ function isLoggedinAndSubscribed(loggedIn, subscribed) {
+ return (loggedIn === 'LOGGED_IN')  ||  (subscribed === 'SUBSCRIBED');
 
-console.log(calcRemainder(4, 2));
+}
+console.log(isLoggedinAndSubscribed('LOGGED_OUT', 'UNSUBSCRIBED')) 
