@@ -1,12 +1,5 @@
- function calcTime(seconds) {
-let timerMinutes = Math.floor(seconds / 60);
-let timerSeconds = seconds  % 60;
-
- if(timerMinutes.toString(). length === 1) {
-     timerMinutes = '0' + timerMinutes 
- }
-
-return timerMinutes + ':' + timerSeconds;
+ function reverseString(str) {
+   return str.split('').reverse().join('');
 }
 
-console.log(calcTime(70));
+console.log(reverseString('abc'));
