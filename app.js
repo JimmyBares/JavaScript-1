@@ -1,5 +1,5 @@
- function reverseString(str) {
-   return str.split('').reverse().join('');
-}
+ function convertToBoolean(arr) {
+  return arr.map(elem =>  !!elem);
+ }
 
-console.log(reverseString('abc'));
+console.log(convertToBoolean([500, 0, "Jimmy", "", []]));
